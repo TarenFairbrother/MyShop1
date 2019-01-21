@@ -176,6 +176,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductCategoryManagerController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -241,6 +243,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductCategoryManager\Index.cshtml" />
+    <Content Include="Views\ProductCategoryManager\Create.cshtml" />
+    <Content Include="Views\ProductCategoryManager\Edit.cshtml" />
+    <Content Include="Views\ProductCategoryManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -257,6 +267,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyShop1.Core\MyShop1.Core.csproj">
+      <Project>{2b9c5fa2-db16-42c3-ac94-f419f59fd80e}</Project>
+      <Name>MyShop1.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop1.DataAccess.InMemory\MyShop1.DataAccess.InMemory.csproj">
+      <Project>{ea6c335d-559e-4f6a-a28b-5bf7cec93389}</Project>
+      <Name>MyShop1.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop1.DataAccess.SQL\MyShop1.DataAccess.SQL.csproj">
+      <Project>{2fa0bc57-6423-4743-92fe-efe89214b189}</Project>
+      <Name>MyShop1.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop1.Services\MyShop1.Services.csproj">
+      <Project>{bf76dd6c-fc6f-4671-8b89-8fb56ebe04ed}</Project>
+      <Name>MyShop1.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
